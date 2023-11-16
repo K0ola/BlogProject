@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(126, 126, 126);
+    text-align: center;
+}
+
+#login_register{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: fit-content;
+    position: absolute;
+    right: 50%;
+    border: solid rgb(0, 255, 34);
+}
+
+div{
+    border: solid blue;
+}
+
+#return{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+#return_home_img{
+    width: 40px;
+    height: 40px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form > input{
+    width: 200px;
+}
+
+#bouton_valide{
+    margin-top: 10px;
+    width: fit-content;
+}

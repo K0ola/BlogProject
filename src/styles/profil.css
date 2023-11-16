@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(168, 168, 168);
+}
+
+h1{
+    text-align: center;
+}
+
+
+#return{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+#return_home_img{
+    width: 40px;
+    height: 40px;
+}
+
+#compte{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2em;
+    position: absolute;
+    top: 0;
+    right: 10px;
+
+}
