@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles/connection.css">
+	<link rel="stylesheet" href="./src/styles/root.css">
+    <link rel="stylesheet" href="./src/styles/connexion.css">
 
-    <title>BK - Connection</title>
+    <title>Todoom - Connection</title>
 </head>
 <body>
 <?php
@@ -17,8 +18,8 @@ if (isset($_SESSION['erreur_login'])) {
 	echo "<script type='text/javascript'>alert('" . $_SESSION['success_login'] . "');</script>";
 	unset($_SESSION['success_login']);
   }
-$db = new PDO('mysql:host=localhost;dbname=blog_kola;port=3306;charset=utf8', 'root', '');
-$requete="SELECT * FROM utilisateurs";
+  $db = new PDO('mysql:host=localhost;dbname=DB_NAME;port=3306;charset=utf8', 'root', '');
+  $requete="SELECT * FROM utilisateurs";
 $stmt=$db->query($requete);
 $result=$stmt->fetchall(PDO::FETCH_ASSOC);
 ?>
@@ -34,32 +35,45 @@ $result=$stmt->fetchall(PDO::FETCH_ASSOC);
             <img src="./src/assets/imgs/home.png" alt="Accueil" id="return_home_img">
         </a>
 
-		<h1>Bienvenue sur la page de connection</h1>
+		<h1>Bienvenue sur la page de connexion</h1>
 		<h2>Veuillez completer les champs du formulaire ci-dessous pour pouvoir vous connecter</h2>
 	
 	
 	<section id="login_register">
 		<div id="identification">
+		<h2>Connexion</h2>
 			<FORM action="./src/scripts/login.php">
-				<label for="login">Nom d'utilisateur</label>
-				<INPUT type=text name="login"> 
-				<label for="mdp" id="label_mdp">Mot de passe</label>
-				<input type="password" name="password">
-				<input type=submit value= "Connection" id="bouton_valide">
+				<div class="form-element">
+					<label for="login">Nom d'utilisateur</label>
+					<INPUT type=text name="login"> 
+				</div>
+				<div class="form-element">
+					<label for="mdp" id="label_mdp">Mot de passe</label>
+					<input type="password" name="password">
+				</div>
+				<input type=submit value= "Connexion" id="bouton_valide">
 			</FORM>
 		</div>
 
 		<div id="inscription">
+		<h2>Inscription</h2>
             <form action="./src/scripts/creation_compte.php">
-                <label for="new_login">Nom d'utilisateur</label>
-                <input type="varchar" name="new_login" id="new_login">
+				
+				<div class="form-element">
+                	<label for="new_login">Nom d'utilisateur</label>
+                	<input type="varchar" name="new_login" id="new_login">
+				</div>
 
-                <label for="new_password">Mot de passe</label>
-                <input type="varchar" name="new_password" id="new_password">
+				<div class="form-element">
+                	<label for="new_password">Mot de passe</label>
+                	<input type="varchar" name="new_password" id="new_password">
+				</div>
 
-                <label for="new_prenom">Pseudonyme</label>
-                <input type="varchar" name="new_pseudonyme" id="new_pseudonyme">
 
+				<div class="form-element">
+                	<label for="new_prenom">Pseudonyme</label>
+                	<input type="varchar" name="new_pseudonyme" id="new_pseudonyme">
+				</div>
                 <input type="submit" value="Inscription" id="bouton_valide">
             </form>
 	</section>

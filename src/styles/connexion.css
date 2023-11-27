@@ -4,17 +4,30 @@ body{
 }
 
 #login_register{
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
     gap: 50px;
     width: fit-content;
     position: absolute;
-    right: 50%;
-    border: solid rgb(0, 255, 34);
+    left: 50%;
+    transform: translateX(-50%);
+
 }
 
-div{
-    border: solid blue;
+#identification, #inscription{
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 300px;
+    border: solid rgb(53, 53, 53);
+    border-radius: 20px;
+    background-color: rgba(150, 150, 150, 0.548);
+
+}
+
+.form-element{
+    display: flex;
+    flex-direction: column;
 }
 
 #return{
@@ -32,10 +45,14 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
-form > input{
+input{
     width: 200px;
+    border-radius: 5px;
+    background-color: rgba(240, 248, 255, 0.514);
+
 }
 
 #bouton_valide{

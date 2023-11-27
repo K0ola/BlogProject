@@ -1,11 +1,37 @@
+
 body{
+    font-family:var(--font_global);
     background-color: rgb(88, 88, 88);
 }
 
-a{
+a, h1, h2{
     color: aliceblue;
     text-decoration: none;
-    cursor: pointer;
+    /* cursor: pointer; */
+}
+
+#join_button{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid #3d223d;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+    display: flex;
+    width: fit-content;
+    gap: 10px;
+    transition: ease 0.5s;
+}
+
+a#join_button:hover {
+    border: solid #3d223d8a;
+    background-color: #f0f8ff26;
+}
+
+#logo_discord{
+    width: 20px;
 }
 
 #compte{
@@ -25,4 +51,71 @@ a{
     margin-top: 5px;
     width: 40px;
     height: 40px;
+}
+
+
+header{
+    text-align: center;
+    height: 200px;
+    /* border: solid red; */
+}
+
+#container{
+    /* background-color: rgba(240, 248, 255, 0.267);
+    border: solid #3d223d; */
+    border-radius: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: nowrap;
+
+}
+
+#container > h1{
+    color: black;
+    text-align: center;
+}
+
+
+footer{
+    position: relative;
+    bottom: 0;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* STYLE topics  -----------------------------------------------------*/
+
+.topic{
+    color: black;
+    border: solid rgb(53, 53, 53);
+    border-radius: 20px;
+}
+
+
+.header_topic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.footer_topics{
+    height: 30px;
+    border-top: solid rgb(53, 53, 53);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.footer_topics img{
+    width: 25px;
 }

@@ -1,7 +1,8 @@
 
 <?php
 session_start();
-$db = new PDO('mysql:host=localhost;dbname=blog_kola;port=3306;charset=utf8', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=DB_NAME;port=3306;charset=utf8', 'root', '');
+
 $new_password = $_GET["new_password"];
 $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
 
@@ -14,7 +15,7 @@ $checkStmt->execute();
 
 if ($checkStmt->fetchColumn() > 0) {
     $_SESSION['erreur_login'] = 'Identifiant déjà inscrit';
-    header('Location: ../../connection.php');
+    header('Location: ../../connexion.php');
     exit;
   } else {
 
@@ -26,8 +27,8 @@ $stmt->bindValue(':hashed_mdp', $hashed_password, PDO::PARAM_STR);
 $stmt->bindValue(':new_pseudonyme', $_GET["new_pseudonyme"], PDO::PARAM_STR);
 $stmt->bindValue(':permission', "1", PDO::PARAM_STR);
 $stmt->execute();
-$_SESSION['success_login'] = 'Utilisateur inscrit avec succés ';
-header('Location: ../../connection.php');
+$_SESSION['success_login'] = 'Vous etes inscrit avec succés ';
+header('Location: ../../connexion.php');
 exit;
 
 }
