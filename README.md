@@ -1,4 +1,4 @@
 # BlogProject
-Blog - projet étudiant
+Forum - projet étudiant
 
 
